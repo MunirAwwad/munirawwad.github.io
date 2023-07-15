@@ -1,0 +1,612 @@
+/*CSS RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*VARIABLES*/
+:root {
+    --FONT-STACK: Monospace, Arial, Helvetica, sans-serif;
+    --BLINKER1: "|";
+    --BLINKER2: "";
+    --BLINKER3:"";
+}
+
+/*UTILITY CLASSES*/
+.nowrap {
+    white-space: nowrap;
+}
+
+/*HTML*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*BODY*/
+body {
+    background-color:rgb(37.5,37.5,37.5);
+}
+
+/*NAV BAR*/
+#nav {
+    background-color: black;
+    height: 4.5vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    color: whitesmoke;
+    font-size: 1.325vw;
+    font-family: var(--FONT-STACK);
+    z-index: 1;
+    position: fixed;
+    top : 0;
+    left: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
+#nav h2:hover {
+    cursor: pointer;
+    border-bottom: solid 2.5px whitesmoke;
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+/*HOME*/
+#home {
+    width: 100%;
+    height: 51vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+#terminal {
+    background-image: url(pics/Terminal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    width: 65%;
+    color: whitesmoke;
+    font-family: var(--FONT-STACK);
+    font-size: 1.5vw;
+    padding: 2vw 0.5vw;
+    border-radius: 0.825vw;
+}
+
+#home-text-1, #home-text-2, #home-text-3 {
+    margin-top: 0.25vw;
+}
+
+#home-text-1::after {
+    content: var(--BLINKER1);
+    font-weight: bolder;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#home-text-2::after {
+    content: var(--BLINKER2);
+    font-weight: bolder;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#home-text-3::after {
+    content: var(--BLINKER3);
+    font-weight: bolder;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    100% {color : rgba(255,255,255,0);}
+}
+
+#home-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+#home button {
+    height: 11.5vw;
+    width: 11.5vw;
+    border-radius: 1vw;
+    background-color: rgb(21,21,21);
+    border: solid 0.5vw rgb(15,15,15);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#home button:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.2s;
+}
+
+#about-me-button img {
+    height: 5.5625vw;
+    width: 6.0625vw;
+    margin-bottom: 0.75vw;
+}
+
+#projects-button img {
+    height: 5.75vw; 
+    width: 5vw;
+    margin-bottom: 0.75vw;
+}
+
+#contact-me-button img {
+    height: 4vw;
+    width: 6.0625vw;
+    margin-bottom: 0.75vw;
+}
+
+#home button h2 {
+    font-size: 1.5vw;
+    font-family: var(--FONT-STACK);
+}
+
+/*ABOUT ME*/
+#about-me {
+    padding-inline: 3vw;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    font-family: var(--FONT-STACK);
+    width: 100%;
+    height: 43.25vw;
+    display: flex;
+    margin-bottom: 5.5vw;
+}
+
+#about-me-anchor {
+    position: relative;
+    top : -7vw;
+}
+
+#about-me h1 {
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+    width: 40%;
+    text-align: center;
+    background-color: rgb(21,21,21);
+    border: solid 0.5vw rgb(15,15,15);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+#about-me h2 {
+    font-weight: normal;
+    font-size: 1.875vw;
+    text-indent: 3.5vw;
+    text-shadow: 0 0 5px black;
+}
+
+#about-me #text {
+    width: 55%;
+}
+
+#about-me-buttons-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+#about-me button {
+    width: 80%;
+    height: 5vw;
+    border-radius: 1vw;
+    background-color: rgb(21,21,21);
+    border: solid 0.5vw rgb(15,15,15);
+    color: whitesmoke;
+    font-size: 2vw;
+    font-family: var(--FONT-STACK);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me button:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+#skills-title, #work-title {
+    font-weight: bold;
+    position: relative;
+    font-size: 2vw;
+}
+
+#about-me #skills-content {
+    display: none;
+    font-size: 1.0625vw;
+}
+
+#skills-button-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+#skills-button-header img {
+    height: 3.75vw;
+    width: auto;
+}
+
+#work-button-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+#work-button-header img {
+    height: 3.25vw;
+}
+
+#skills ul {
+    align-self: flex-start;
+    text-align: left;
+    display: none;
+    position: relative;
+    font-weight: normal;
+    width: 87.5%;
+    left: 2.5vw;
+    top : 0.5vw;
+}
+
+#skills li {
+    margin-bottom: 2.5%;
+}
+
+#skills li:last-child {
+    margin-bottom: 0;
+}
+
+/*PROJECTS*/
+#projects {
+    padding-inline: 3vw;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    font-family: var(--FONT-STACK);
+    width: 100%;
+    height: 43.25vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+}
+
+#projects h1 {
+    font-size: 3vw;
+    margin-bottom: 1.75vw;
+    text-align: center;
+    background-color: rgb(21,21,21);
+    border: solid 0.5vw rgb(15,15,15);
+    padding: 1vw;
+    width: 20%;
+    border-radius: 1vw;
+}
+
+#projects h2 {
+    font-weight: normal;
+    font-size: 1.875vw;
+    text-indent: 3.5vw;
+    text-shadow: 0 0 5px black;
+}
+
+#projects #last-line {
+    text-indent: 0;
+    margin-bottom: 1.75vw;
+}
+
+#projects-github-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects button {
+    font-size: 2vw;
+    font-family: var(--FONT-STACK);
+    font-weight: normal;
+    width: 20vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    background-color: rgb(21, 21, 21);
+    border: solid 0.5vw rgb(15,15,15);
+    color: white;
+    margin-bottom: 1.25vw;
+    cursor: pointer;
+}
+
+#projects a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#projects button:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+#projects button img {
+    border-radius: 1vw;
+    height: 4.25vw;
+}
+
+#cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+#card1, #card2 {
+    background-color: rgb(21,21,21);
+    border: solid 0.5vw rgb(15,15,15);
+    width: 20vw;
+    height: 17.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 1vw;
+}
+
+#card1:hover, #card2:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+#card1 h1, #card2 h1{
+    font-size: 1.5vw;
+    font-family: var(--FONT-STACK);
+    font-weight: normal;
+    width: 100%;
+    border: none;
+    margin: 0;
+    text-shadow: 0 0 5px black;
+    border-radius: 0;
+}
+
+#card1 img {
+    height: 10vw;
+    border: solid 0.5vw rgb(15,15,15);
+    border-radius: 1vw;
+}
+
+#projects-anchor {
+    position: relative;
+    top : -6.325vw;
+}
+
+/*CONTACT ME*/
+#contact-me {
+    height: 22.5vw;
+    width: 100%;
+    padding: 1vw 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1vw;
+}
+
+#contact-me h1 {
+    font-size: 2.75vw;
+    font-family: var(--FONT-STACK);
+    margin-bottom: 2.5vw;
+    text-align: center;
+    background-color: rgb(21,21,21);
+    border: solid 0.5vw rgb(15,15,15);
+    padding: 1vw;
+    width: 30%;
+    border-radius: 1vw;
+    color: whitesmoke;   
+}
+
+#contact-me-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+#contact-me button {
+    font-size: 1.5vw;
+    font-family: var(--FONT-STACK);
+    font-weight: normal;
+    width: 21.125vw;
+    height: 6vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap : 0.75vw;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    background-color: rgb(21, 21, 21);
+    border: solid 0.5vw rgb(15,15,15);
+    color: white;
+    cursor: pointer;
+}
+
+#contact-me a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#contact-me #linkedin-button img {
+    border-radius: 1vw;
+    height: 4.25vw;
+}
+
+#contact-me #github-button img {
+    border-radius: 1vw;
+    height: 4.25vw;
+}
+
+#contact-me #mail-button img {
+    border-radius: 1vw;
+    height: 4.25vw;
+    width: 5.25vw;
+}
+
+#contact-me button:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+/******OVERLAY******/
+#overlay {
+    position: fixed;
+    top : 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay form {
+    height: 47.5vw;
+    width: 35vw;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    font-family: var(--FONT-STACK);
+    background-color: black;
+    border: solid 0.6vw whitesmoke;
+    border-radius: 2.5vw;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.75vw;
+}
+
+#form-title {
+    font-size: 2.25vw;
+    font-weight: bolder;
+    border-bottom: solid 1px white;
+    padding-bottom: 0.25vw;
+}
+
+#close-overlay {
+    width: 10%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 1.75vw;
+    font-weight: bold;
+    background-color: rgb(15,15,15);
+    border: solid 0.3vw whitesmoke;
+    border-radius: 0.5vw;   
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay label {
+    margin-bottom: 1vw;
+}
+
+#overlay input {
+    height: 2.75vw;
+    font-size: 1.25vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    border: solid 0.3vw  whitesmoke;
+    margin-bottom: 1.5vw;
+}
+
+#overlay textarea {
+    height: 10vw;
+    font-size: 1.35vw;
+    padding: 0.625vw 1vw;
+    border-radius: 1vw;
+    border: solid 0.3vw  whitesmoke;
+    margin-bottom: 2vw;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5vw;
+}
+
+#submit, #reset {
+    width: 22.5%;
+    height: 3vw;
+    background-color: black;
+    color: whitesmoke;
+    border: solid 0.3vw whitesmoke;
+    border-radius: 1vw;
+    font-size: 1.25vw;
+    font-family: var(--FONT-STACK);
+}
+
+#submit:hover, #reset:hover, #close-overlay:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+#submit:active, #reset:active, #close-overlay:active {
+    background-color: whitesmoke;
+}
+
+#overlay p {
+    font-size: 0.8vw;
+    align-self: flex-start;
+    color: whitesmoke;
+    position: relative;
+    bottom: -1vw;
+}
+
+#overlay p a {
+    color: whitesmoke;
+}
+
+#overlay p a:hover {
+    color: cyan;
+}
+
+textarea {
+    resize: none;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munir's Personal Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="nav">
+        <h2 id="home-link">Home</h2>
+        <h2 id="about-me-link"><span class="nowrap">About Me</span></h2>
+        <h2 id="projects-link">Projects</h2>
+        <h2 id="contact-me-link"><span class="nowrap">Contact Me</span></h2>
+    </div>
+    <div id="home">
+        <div id="terminal">
+            <div id="text">
+                <p id="home-text-1">munir@debian:~$</p>
+                <p id="home-text-2"></p>
+                <p id="home-text-3"></p>
+            </div>
+        </div>
+        <div id="home-buttons-container">
+            <button id="about-me-button">
+                <img src="pics/aboutIcon.png" alt="aboutMeIcon" height="87.5px" width="95px">
+                <h2><span class="nowrap">Who am I?</span></h2>
+            </button>
+            <button id="projects-button">
+                <img src="pics/projects.png" alt="aboutMeIcon" height="90px" width="80px">
+                <h2><span class="nowrap">My Projects</span></h2>
+            </button>
+            <button id="contact-me-button">
+                <img src="pics/contactMe.png" alt="aboutMeIcon" height="65px" width="95px">
+                <h2><span class="nowrap">Contact Me</span></h2>
+            </button>
+        </div>
+    </div>
+    <div id="about-me">
+        <a id="about-me-anchor"></a>
+        <div id="text">
+            <h1><span class="nowrap">Who Am I?</span></h1>
+            <h2>I am a computer science CO-OP student at McMaster University going into my
+                sophomore year with an expected graduation date in 2027.</h2>
+            <h2>I have always had a passion for anything related to computers ever since high school, and while I am unsure of the exact field I would like to go into after graduation,
+                I am open to many different options such as penetration-testing and many different
+                fields of developement including systems, software, web, game developement, and more!
+            </h2>
+            <h2>
+                I am eager to share my skillset and experience with the world, and hence I invite you to
+                view the tabs on the left to learn more about my:
+            </h2>
+        </div>
+        <div id="about-me-buttons-container">
+            <button id="skills">
+                <div id="skills-button-header">
+                    <img src="pics/skillsIcon.png" alt="skillsIcon" height="50px">
+                    <span id="skills-title">Skills</span>
+                    <img src="pics/skillsIcon.png" alt="skillsIcon" height="50px">
+                </div>
+                <ul id="skills-content">
+                    <li>Programming and Scripting Experience in C, Python, Bash, Haskell, HTML, CSS, and JavaScript</li>
+                    <li>Experience with Unix-based systems and terminals including automation of tasks, static and dynamic compilation, object files, compilation libraries, program testing, benchmarking, and documentation, makefiles, and more</li>
+                    <li>Experience with GitHub version-control including branching and merging, GitHub jobs and automation, GitHub page hosting and more</li>
+                    <li>Miscellaneous skills including RegEx and markdown-style formatting</li>
+                </ul>
+            </button>
+            <button id="work">
+                <div id="work-button-header">
+                    <img src="pics/workIcon.png" alt="workIcon" height="10px">
+                    <span class="nowrap" id="work-title">Work Experience</span>
+                    <img src="pics/workIcon.png" alt="workIcon" height="10px">
+                </div>
+            </button>
+        </div>
+    </div>
+    <div id="projects">
+        <a id="projects-anchor"></a>
+        <div id="text">
+            <h1>Projects</h1>
+            <h2>You can find a full list of projects I like to work on in my free time by visiting
+            my github account below.</h2>
+            <div id="projects-github-button-container">
+                <a href="https://github.com/MunirAwwad?tab=repositories" target="_blank">
+                    <button id="projects-github-button">
+                        <img src="pics/Github.jpg" alt="Github Logo" id="github-logo"></img>
+                        MunirAwwad
+                    </button>
+                </a>
+            </div>
+            <h2 id="last-line">However, here are some of my favourites:</h2>
+            <div id="cards-container">
+                <a href="https://github.com/MunirAwwad/To-Do-List-Extension" target="_blank">
+                    <div id="card1">
+                        <h1 id="card1-title">To-Do-List Extension For Google Chrome</h1>
+                        <img src="pics/TDLE.png" alt="TDLE Image" height="150px">
+                    </div>
+                </a>
+                <a>
+                    <div id="card2">
+                        <h1 id="card1-title">This Website!</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="contact-me">
+        <a id="contact-me-anchor"></a>
+        <h1><span class="nowrap">Get In Contact</span></h1>
+        <div id="contact-me-button-container">
+            <a href="https://www.linkedin.com/in/munirawwad/" target="_blank"><button id="linkedin-button"><img src="pics/Linkedin.png" alt="Linkedin Logo" id="linkedin-logo" height="65px"></img><h2>munirawwad</h2></button></a>
+            <a href="https://github.com/MunirAwwad" target="_blank"><button id="github-button"><img src="pics/Github.jpg" alt="Github Logo" id="github-logo" height="65px"></img><h2>MunirAwwad</h2></button></a>
+            <a><button id="mail-button"><img src="pics/Envelope.png" alt="envelope" id="mail-logo" height="55px" width="75px"><h2>Email Me</h2></button></a>
+        </div>
+    </div>
+    <div id="overlay">
+        <form  id="mail" action="https://formspree.io/f/mknlwwkv" method="POST">
+            <div id="form-header">
+                <span id="form-title">Email Me</span>
+                <div id="close-overlay">X</div>
+            </div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" placeholder="Name" required>
+            <label for="email">Contact Email:</label>
+            <input type="email" id="email" name="Email" placeholder="Email" required>
+            <label for="company">Company Name (Optional):</label>
+            <input type="text" id="company" name="Company" placeholder="Company">
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="Message" cols="30" rows="10" placeholder="Message" required></textarea>
+            <div id="buttons-container">
+                <button type="submit" name="submit" id="submit">Send</button>
+                <button type="reset" name="reset" id="reset">Clear</button>
+            </div>
+            <p>Email handling powered by a third party service. Learn more at <a href="https://formspree.io/" target=”_blank”>https://formspree.io/</a></p>
+        </form>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
