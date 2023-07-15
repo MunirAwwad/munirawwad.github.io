@@ -408,12 +408,12 @@ body {
 
 /*CONTACT ME*/
 #contact-me {
-    height: 22.5vw;
+    height: 43.25vw;
     width: 100%;
     padding: 1vw 3vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 1vw;
 }
