@@ -314,15 +314,20 @@ body {
     text-shadow: 0 0 5px black;
 }
 
-#projects #last-line {
-    text-indent: 0;
-    margin-bottom: 1.75vw;
+#projects a {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
-#projects-github-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#projects #last-line {
+    text-indent: 0;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+
+#text #github-link {
+    color: red;
+    text-decoration: underline;
 }
 
 #projects button {
@@ -340,11 +345,6 @@ body {
     color: white;
     margin-bottom: 1.25vw;
     cursor: pointer;
-}
-
-#projects a {
-    text-decoration: none;
-    color: whitesmoke;
 }
 
 #projects button:hover {
@@ -403,7 +403,7 @@ body {
 
 #projects-anchor {
     position: relative;
-    top : -6.325vw;
+    top : -7vw;
 }
 
 /*CONTACT ME*/
