@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Munir's Personal Website</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="header">
+            <a id="home-link">Home</a>
+            <a id="about-me-link"><span class="no-wrap">About me</span></a>
+            <a id="projects-link">Projects</a>
+            <a id="contact-me-link"><span class="no-wrap">Contact me</span></a>
+        </div>
+        <div id="intro">
+            <div id="animated-text-1">Hello, I'm Munir!</div>
+            <div id="animated-text-2">Welcome to my website</div>
+            <div id="animated-text-3">Scroll down or pick an option learn more about me:</div>
+            <div id="intro-buttons-container">
+                <button id="about-me-button"><span class="no-wrap">About Me</span></button>
+                <button id="projects-button"><span class="no-wrap">My Projects</span></button>
+                <button id="contact-me-button"><span class="no-wrap">Contact Info</span></button>
+            </div>
+        </div>
+        <div id="about-me">
+            <a id="about-me-anchor"></a>
+            <div id="about-me-text-container">
+                <span id="about-me-title" class="no-wrap">Who Am I?</span>
+                <div id="about-me-text">
+                    <div>I am a computer science CO-OP student at McMaster University going into my
+                        sophomore year with an expected graduation date in 2027.</div>
+                    <div>I have always had a passion for anything related to computers ever since high school, and while I am unsure of the exact field I would like to go into after graduation,
+                        I am open to many different options such as penetration-testing and many different
+                        fields of developement including systems, software, web, game developement, and more!
+                    </div>
+                    <div>
+                        I am eager to share my skillset and experience with the world, and hence I invite you to
+                        view the tabs on the left to learn more about my:
+                    </div>
+                </div>
+            </div>
+            <div id="about-me-buttons-container">
+                <button id="skills-button">
+                    <span id="skills-title">Skills</span>
+                    <ul id="skills-content">
+                        <li><span class="listText">Programming and Scripting Experience in C, Python, Bash, Haskell, HTML, CSS, and JavaScript</span></li>
+                        <li><span class="listText">Experience with Unix-based systems and terminals including program testing, benchmarking, and documentation, static and dynamic compilation, creating makefiles, and more</span></li>
+                        <li><span class="listText">Experience with GitHub version-control including branching and merging, GitHub jobs automation, GitHub page hosting and more</span></li>
+                        <li><span class="listText">Miscellaneous skills including RegEx and markdown-style formatting</span></li>
+                    </ul>
+                </button>
+                <button id="work-button">
+                    <span id="work-title">Work Experience</span>
+                </button>
+            </div>
+        </div>
+        <div id="projects">
+            <a id="projects-anchor"></a>
+            <span id="projects-title">Projects</span>
+            <div id="projects-description">For a full list of the projects I work on in my free time, click <a>here</a>. However, here are some of my favourite honorable mentions:</div>
+            <div id="projects-container">
+                <div>
+                    <span class="project-title">To Do List Extension</span>
+                    <span class="project-description">A Google Chrome to-do list extension to help with managing tasks and progress. </span>
+                    <img class="project-image" src="images/TDLE.png" alt="EXAMPLE_IMAGE" height="50%">
+                </div>
+                <div>
+                    <span class="project-title">This Website!</span>
+                </div>
+            </div>
+        </div>
+        <div id="contact-me">
+            <a id="contact-me-anchor"></a>
+            <span id="contact-me-title" class="no-wrap">Contact Me</span>
+            <div id="contact-container">
+                <div id="contact-row">
+                    <a href="https://www.linkedin.com/in/munirawwad/" target="_blank">
+                        <div id="linkedin-link">
+                        <img src="images/icons/Linkedin.png" alt="LINKEDIN_IMG" height="117.5%">
+                        munirawwad
+                        </div>
+                    </a>
+                    <a href="https://github.com/MunirAwwad" target="_blank">
+                        <div id="github-link">
+                            <img src="images/icons/Github.jpg" alt="GITHUB_IMG" height="120%">
+                            MunirAwwad
+                        </div>
+                    </a>
+                    <div id="email-link">
+                        <img src="images/icons/Email.png" alt="EMAIL_IMG" height="125%" id="email-icon">
+                        <span class="no-wrap">
+                        Email Me!
+                        </span>
+                    </div>
+                </div>
+                <div id="contact-row">
+
+                </div>
+            </div>
+        </div>
+        <div id="email-overlay">
+            <form  id="mail" action="https://formspree.io/f/mknlwwkv" method="POST">
+                <div id="form-header">
+                    <span id="form-title">Email Me</span>
+                    <div id="close-overlay">X</div>
+                </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" placeholder="Name" required>
+                <label for="email"><span class="no-wrap">Contact Email:</span></label>
+                <input type="email" id="email" name="Email" placeholder="Email" required>
+                <label for="company"><span class="no-wrap">Company Name (Optional):</span></label>
+                <input type="text" id="company" name="Company" placeholder="Company">
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="Message" cols="30" rows="7" placeholder="Message" required></textarea>
+                <div id="form-buttons-container">
+                    <button type="submit" name="submit" id="submit">Send</button>
+                    <button type="reset" name="reset" id="reset">Clear</button>
+                </div>
+                <p>Email handling powered by a third party service. Learn more at <a href="https://formspree.io/" target=”_blank”>https://formspree.io/</a>.</p>
+            </form>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>

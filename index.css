@@ -1,0 +1,453 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --FONT-STACK : 'Courier New', Courier, serif;
+    --BLINKER1 : "";
+    --BLINKER2 : "";
+    --BLINKER3 : "";
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(52.5,52.5,52.5);
+    background-image: url(images/bg.jpg);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5vw;
+    color: whitesmoke;
+    font-family: var(--FONT-STACK);
+    font-size: 1.75vw;
+    transition: background-color 0.5s;
+    z-index: 1;
+}
+
+#header a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    border-bottom: solid 0.15vw whitesmoke;
+}
+
+/*Intro Section*/
+#intro {
+    width: 100%;
+    height: 42.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 5vw;
+    font-family: var(--FONT-STACK);
+    margin-top: 4vw;
+}
+
+#animated-text-1::after {
+    content : var(--BLINKER1);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#animated-text-2::after {
+    content : var(--BLINKER2);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    100% {color : rgba(255,255,255,0);}
+}
+
+#animated-text-3 {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    opacity: 1; /*Will change in Javascript*/
+    margin-top: 1.75vw;
+}
+
+#intro-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    height: 10%;
+    margin-top: 2vw;
+    opacity: 1; /*Will change in Javascript*/
+}
+
+#intro-buttons-container button {
+    padding: 1vw;
+    font-family: var(--FONT-STACK);
+    font-size: 1.5vw;
+    border-radius: 2vw;
+    border: solid 0.15vw whitesmoke;
+    background-color: rgb(20,20,20);
+    color: whitesmoke;
+}
+
+#intro-buttons-container button:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+#intro-buttons-container button:active {
+    transform: scale(1);
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+/*About Me*/
+#about-me {
+    height: 42.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    font-family: var(--FONT-STACK);
+    padding: 2vw;
+}
+
+#about-me-anchor {
+    position: relative;
+    top: -25vw;
+}
+
+#about-me-text-container {
+    width: 50%;
+}
+
+#about-me-title {
+    font-size: 3.75vw;
+}
+
+#about-me-text {
+    font-size: 1.75vw;
+    margin-top: 1.5vw;
+    text-indent: 2.5vw;
+}
+
+#about-me-text div {
+    margin-bottom: 0.5vw;
+}
+
+#about-me-buttons-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+#about-me button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding: 1vw;
+    font-family: var(--FONT-STACK);
+    font-size: 2vw;
+    border-radius: 2vw;
+    border: solid 0.15vw whitesmoke;
+    background-color: rgb(20,20,20);
+    color: whitesmoke;
+    height: 4vw;
+    padding: 1.25vw;
+}
+
+#skills-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+#work-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.1s;
+    cursor: not-allowed;
+}
+
+#skills-content {
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    text-align: left;
+    margin-left: 1.75vw;
+    display: none;
+}
+
+/*Projects*/
+#projects {
+    height: 42.5vw;
+    color: whitesmoke;
+    font-family: var(--FONT-STACK);
+    padding: 2vw;
+}
+
+#projects-anchor {
+    position: relative;
+    top : -7.5vw;
+}
+
+#projects-title {
+    font-size: 3.75vw;
+}
+
+#projects-description {
+    margin-top: 1.5vw;
+    font-size: 1.75vw;
+    text-indent: 2.5vw;
+    margin-bottom: 5vw;
+}
+
+#projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+#projects-container div {
+    width: 22.5vw;
+    height: 22.5vw;
+    background-color: red;
+    border: solid 0.15vw whitesmoke;
+    background-color: rgb(20,20,20);
+    border-radius: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 1.25vw;
+    border-bottom: solid 0.15vw whitesmoke;
+    margin-bottom: 1vw;
+}
+
+.project-title:last-child {
+    border: none;
+}
+
+.project-description {
+    text-indent: 1vw;
+    margin-bottom: 1vw;
+    padding-inline: 1vw;
+    font-size: 1vw
+}
+
+.project-image {
+    height: 50%;
+    border-radius: 1vw;
+    border: solid 0.25vw whitesmoke;
+}
+
+#projects-container div:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+
+/*Contact Me*/
+#contact-me {
+    height: 42.5vw;
+    color: whitesmoke;
+    font-family: var(--FONT-STACK);
+    padding: 2vw;
+}
+
+#contact-me-anchor {
+    position: relative;
+}
+
+#contact-me-title {
+    font-size: 3.75vw;
+}
+
+#contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+}
+
+#contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 7.5vw;
+}
+
+#contact-container a {
+    text-decoration: none;
+}
+
+#contact-container div a div,  #contact-container div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    height: 5vw;
+    padding: 1vw;
+    font-family: var(--FONT-STACK);
+    font-size: 1.75vw;
+    border-radius: 2vw;
+    border: solid 0.15vw whitesmoke;
+    background-color: rgb(20,20,20);
+    color: whitesmoke;
+}
+
+#contact-container div a div:hover,  #contact-container div div:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+
+#contact-container div a div:active,  #contact-container div div:active {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.1s;
+}
+
+#contact-container div a div img, #contact-container div div img {
+    border-radius: 1vw;
+}
+
+#email-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.75); 
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 90%;
+    width: 40%;
+    background-color: rgb(20,20,20);
+    border: solid 0.25vw whitesmoke;
+    border-radius: 2vw;
+    padding: 1.25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    color: white;
+    font-family: var(--FONT-STACK);
+}
+
+#form-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-header span {
+    font-size: 2.5vw;
+}
+
+#close-overlay {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#close-overlay:hover {
+    cursor: pointer;
+}
+
+label {
+    font-size: 1.25vw;
+    width: min-content;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input {
+    padding: 0.5vw;
+    border-radius: 1vw;
+    font-size: 1vw;
+}
+
+textarea {
+    padding: 0.5vw;
+    border-radius: 1vw;
+    font-size: 1vw;
+    resize: none;
+}
+
+#form-buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1vw;
+}
+
+form button {
+    background-color: rgb(20,20,20);
+    font-size: 1vw;
+    padding: 0.5vw;
+    color: whitesmoke;
+    border-radius: 1vw;
+    border: solid 0.2vw whitesmoke;
+    margin-top: 0.5vw;
+}
+
+form button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+
+form button:active {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.1s;
+}
+
+form p {
+    font-size: 1vw;
+    margin-top: 0.325vw;
+}
+
+form p a {
+    color: aqua;
+}
