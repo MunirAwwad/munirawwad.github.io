@@ -230,6 +230,10 @@ body {
     margin-bottom: 5vw;
 }
 
+#projects-description a, #projects-description a:hover, #projects-description a:visited {
+    color: aqua;
+}
+
 #projects-container {
     display: flex;
     justify-content: center;
@@ -237,7 +241,7 @@ body {
     gap: 5vw;
 }
 
-#projects-container div {
+#projects-container div, #projects-container a {
     width: 22.5vw;
     height: 22.5vw;
     background-color: red;
@@ -248,6 +252,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color : whitesmoke;
+}
+
+#projects-container a:active, #projects-container a:visited {
+    color : whitesmoke;
+    text-decoration: none;
 }
 
 .project-title {
@@ -448,6 +459,6 @@ form p {
     margin-top: 0.325vw;
 }
 
-form p a {
+form p a, form p a:active, form p a:visited {
     color: aqua;
 }
