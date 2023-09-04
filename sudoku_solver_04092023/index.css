@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+/*HEADER SECTION*/
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625vw 1.25vw 0.125vw 1.25vw;
+}
+
+#header h1 {
+    font-family: "Yatra One", Arial, Helvetica, sans-serif;
+    font-size: 3.625vw;
+    font-weight: bolder;
+}
+
+/*MIDDLE SECTION*/
+#main-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+#text-container {   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 40vw;
+    width: 40%;
+    padding-top: 2.325%;
+}
+
+#text-container h2 {
+    font-family: "Yatra One", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1.75vw;
+    margin-bottom: 0.5vw;
+}
+
+#text-container h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.175vw;
+    margin-bottom: 0.5vw;
+}
+
+#text-container a, #text-container a:active{
+    color : red;
+}   
+
+#text-container a:hover {
+    color : palevioletred;
+}
+
+#lists-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5vw;
+    margin : 0.5vw 0 0.5vw 0;
+}
+
+#lists-container li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.175vw;
+}
+
+#solver-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 1.625vw;
+}
+
+table {
+    border: solid 0.4vw black;
+    border-collapse: collapse;
+}
+
+tr:nth-child(3), tr:nth-child(6) {
+    border-bottom: solid 0.4vw black;
+}
+
+td {
+    height: 3.625vw;
+    width: 3.625vw;
+    border: solid 0.15vw black;
+}
+
+td:nth-child(3), td:nth-child(6) {
+    border-right: solid 0.4vw black;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+
+#value-error {
+    font-size: 1.25vw;
+    font-family: "Yatra One", Arial, Helvetica, sans-serif;
+    color: red;
+    display: none;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+button {
+    font-size: 1.75vw;
+    font-family: "Yatra One";
+    padding: 0.5vw 1vw;
+    background-color: bisque;
+    border: solid 0.25vw black;
+    border-radius: 1vw;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
