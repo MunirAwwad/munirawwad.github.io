@@ -112,13 +112,13 @@ function openSkills () {
     let id3 = setInterval(function () {
         if (height < 25) {
             height+=0.5;
-            topOffset-=(9/42);
+            topOffset-=(10/42);
             leftOffset-=(12/42);
             skillsButton.style.height = height + "vw";
             skillsTitle.style.top = topOffset + "vw";
             skillsTitle.style.left = leftOffset + "vw";
         } else {
-            skillsTitle.style.top = "-1.25vw";
+            skillsTitle.style.top = "-1vw";
             document.getElementById("skills-content").style.display = "flex";
             skillsOpen = !skillsOpen
             clearInterval(id3);

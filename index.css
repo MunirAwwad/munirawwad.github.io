@@ -231,7 +231,8 @@ body {
 }
 
 #projects-description a, #projects-description a:hover, #projects-description a:visited {
-    color: aqua;
+    color: whitesmoke;
+    font-weight: bold;
 }
 
 #projects-container {
@@ -244,7 +245,6 @@ body {
 #projects-container div, #projects-container a {
     width: 22.5vw;
     height: 22.5vw;
-    background-color: red;
     border: solid 0.15vw whitesmoke;
     background-color: rgb(20,20,20);
     border-radius: 2.5vw;
