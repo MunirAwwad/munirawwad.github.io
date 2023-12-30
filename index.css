@@ -20,8 +20,9 @@ html {
 }
 
 body {
-    background-color: rgb(52.5,52.5,52.5);
-    background-image: url(images/bg.png);
+    background-color: rgb(75,75,75);
+    background-image: url(images/bg.jpg);
+    background-size: cover;
     background-blend-mode: multiply;
     background-attachment: fixed;
 }
