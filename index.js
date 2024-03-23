@@ -1,3 +1,78 @@
+/*****CANVAS HANDLER*****/
+let canvas = document.getElementById("bg");
+let ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+class Particle {
+    constructor(x,y,size){
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.speedX = [-1,-2,1,2][Math.floor(Math.random() *4)]/4
+        this.speedY = [-1,-2,1,2][Math.floor(Math.random() *4)]/4
+    }
+
+    changeCoordinates(nx,ny) {
+        this.x = nx;
+        this.y = ny;
+    }
+
+    update () {
+        if (this.x >= canvas.width || this.x<=0) {
+            this.speedX = -this.speedX
+        }
+        if (this.y >= canvas.height || this.y<=0) {
+            this.speedY = -this.speedY
+        }
+        this.x+=this.speedX
+        this.y+=this.speedY
+        this.draw();
+    }
+
+    draw () {
+        ctx.fillStyle = "rgb(150,150,150)";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();   
+    }
+}
+
+avgScreenSize = (window.innerHeight + window.innerWidth)
+numParticels = avgScreenSize/30
+
+let particlesArr = []
+for (let i=0; i<numParticels; i++) {
+    particlesArr.push(new Particle(Math.random()*canvas.width,Math.random()*canvas.height, avgScreenSize/1000))
+}
+
+function animate () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i=0; i<numParticels; i++) {
+        particlesArr[i].update()
+        for (let j=0; j<numParticels; j++) {
+            if (i!=j){
+                dist = Math.sqrt(Math.pow(particlesArr[j].x - particlesArr[i].x,2) + Math.pow(particlesArr[j].y - particlesArr[i].y,2))
+                if (dist < 175) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = "rgb(150,150,150)";
+                    ctx.lineWidth = avgScreenSize/(dist*50)
+                    ctx.moveTo(particlesArr[j].x, particlesArr[j].y);
+                    ctx.lineTo(particlesArr[i].x, particlesArr[i].y);
+                    ctx.stroke();      
+                }
+            }
+        }
+    }
+    requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
 /*****INTRO SECTION ANIMATION*****/
 let animatedText1 = document.getElementById("animated-text-1")
 let str1 = "Hello, I'm Munir!";
@@ -110,10 +185,10 @@ function openSkills () {
     let topOffset = 0;
     let leftOffset = 0;
     let id3 = setInterval(function () {
-        if (height < 25) {
+        if (height < 27.5) {
             height+=0.5;
             topOffset-=(10/42);
-            leftOffset-=(12/42);
+            leftOffset-=(11/42);
             skillsButton.style.height = height + "vw";
             skillsTitle.style.top = topOffset + "vw";
             skillsTitle.style.left = leftOffset + "vw";
@@ -148,46 +223,6 @@ function closeSkills () {
     }, 5)
 }
 
-// function openWork () {
-//     workTitle.style.position = "relative";
-//     let height = 4;
-//     let topOffset = 0;
-//     let leftOffset = 0;
-//     let id5 = setInterval(function () {
-//         if (height < 25) {
-//             height+=0.5;
-//             topOffset-=(10/42);
-//             leftOffset-=(7/42);
-//             workButton.style.height = height + "vw";
-//             workTitle.style.top = topOffset + "vw";
-//             workTitle.style.left = leftOffset + "vw";
-//         } else {
-//             workOpen = !workOpen
-//             clearInterval(id5);
-//         }
-//     }, 5)
-// }
-
-// function closeWork () {
-//     workTitle.style.position = "relative";
-//     let height = 25;
-//     let topOffset = -10;
-//     let leftOffset = -7;
-//     let id6 = setInterval(function () {
-//         if (height > 4) {
-//             height-=0.5;
-//             topOffset+=(10/42);
-//             leftOffset+=(7/42);
-//             workButton.style.height = height + "vw";
-//             workTitle.style.top = topOffset + "vw";
-//             workTitle.style.left = leftOffset + "vw";
-//         } else {
-//             workOpen = !workOpen
-//             clearInterval(id6);
-//         }
-//     }, 5)
-// }
-
 skillsButton.addEventListener("click", function () {
     if (workOpen) {
         closeWork();
@@ -196,17 +231,6 @@ skillsButton.addEventListener("click", function () {
         openSkills();
     } else {
         closeSkills();
-    }
-});
-
-workButton.addEventListener("click", function () {
-    if (skillsOpen) {
-        closeSkills();
-    }
-    if (!workOpen) {
-        openWork();
-    } else {
-        closeWork();
     }
 });
 

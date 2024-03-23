@@ -21,10 +21,14 @@ html {
 
 body {
     background-color: rgb(0,0,0);
-    background-image: url(images/bg.jpg);
-    background-size: cover;
-    background-position: 6.25vw;
-    background-attachment: fixed;
+}
+
+canvas {
+    background: rgb(0,0,0);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -100;
 }
 
 #header {
@@ -62,6 +66,7 @@ body {
     font-size: 5vw;
     font-family: var(--FONT-STACK);
     margin-top: 4vw;
+    text-shadow: black 0 0 20px;
 }
 
 #animated-text-1::after {
@@ -132,6 +137,7 @@ body {
     color: whitesmoke;
     font-family: var(--FONT-STACK);
     padding: 2vw;
+    text-shadow: black 0 0 20px;
 }
 
 #about-me-anchor {
@@ -213,6 +219,7 @@ body {
     color: whitesmoke;
     font-family: var(--FONT-STACK);
     padding: 2vw;
+    text-shadow: black 0 0 20px;
 }
 
 #projects-anchor {
@@ -461,5 +468,5 @@ form p {
 }
 
 form p a, form p a:active, form p a:visited {
-    color: aqua;
+    color: whitesmoke;
 }
