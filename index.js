@@ -3,6 +3,8 @@ let canvas = document.getElementById("bg");
 let ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+canvas.style.width = window.innerWidth;
+canvas.style.height = window.innerHeight;
 
 class Particle {
     constructor(x,y,size){
@@ -71,6 +73,8 @@ animate();
 window.addEventListener("resize", function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.style.width = window.innerWidth;
+    canvas.style.height = window.innerHeight;
 });
 
 /*****INTRO SECTION ANIMATION*****/
