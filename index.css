@@ -319,7 +319,8 @@ canvas {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5vw;
+    margin-top: 7.5vw;
+    gap: 10vw;
 }
 
 #contact-row {
@@ -346,6 +347,7 @@ canvas {
     border: solid 0.15vw whitesmoke;
     background-color: rgb(20,20,20);
     color: whitesmoke;
+    width: 17.25vw;
 }
 
 #contact-container div a div:hover,  #contact-container div div:hover {
