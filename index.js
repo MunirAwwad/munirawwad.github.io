@@ -6,13 +6,33 @@ canvas.height = window.innerHeight;
 canvas.style.width = window.innerWidth;
 canvas.style.height = window.innerHeight;
 
+window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.width = window.innerWidth;
+    canvas.style.height = window.innerHeight;
+});
+
+avgScreenSize = (window.innerHeight + window.innerWidth)
+var numParticles = 0;
+
+if (window.innerWidth <= 750){
+    numParticles = avgScreenSize/50
+}
+else if (window.innerWidth <= 1250) {
+    numParticles = avgScreenSize/35
+} 
+else {
+    numParticles = avgScreenSize/30
+}
+
 class Particle {
     constructor(x,y,size){
         this.x = x;
         this.y = y;
         this.size = size;
-        this.speedX = [-1,-2,1,2][Math.floor(Math.random() *4)]/4
-        this.speedY = [-1,-2,1,2][Math.floor(Math.random() *4)]/4
+        this.speedX = [-1,-2,1,2][Math.floor(Math.random() *4)]/6
+        this.speedY = [-1,-2,1,2][Math.floor(Math.random() *4)]/6   
     }
 
     changeCoordinates(nx,ny) {
@@ -20,15 +40,18 @@ class Particle {
         this.y = ny;
     }
 
-    update () {
+
+    //*************************FIX DELTATIME WHEN PAUSE ISSUE*************************/
+    update (force) {
         if (this.x >= canvas.width || this.x<=0) {
             this.speedX = -this.speedX
         }
         if (this.y >= canvas.height || this.y<=0) {
             this.speedY = -this.speedY
         }
-        this.x+=this.speedX
-        this.y+=this.speedY
+
+        this.x+=(this.speedX*force)
+        this.y+=(this.speedY*force)
         this.draw();
     }
 
@@ -40,19 +63,28 @@ class Particle {
     }
 }
 
-avgScreenSize = (window.innerHeight + window.innerWidth)
-numParticels = avgScreenSize/30
-
 let particlesArr = []
-for (let i=0; i<numParticels; i++) {
+for (let i=0; i<numParticles; i++) {
     particlesArr.push(new Particle(Math.random()*canvas.width,Math.random()*canvas.height, avgScreenSize/1000))
 }
 
-function animate () {
+//*************************FIX INITIALIZATION ISSUE*************************/
+// var lastTimestamp = 0;
+// var deltaTime = null;
+
+//Temporary
+const moveForce = 2;
+
+function animate (/*currentTimeStamp*/) {
+    //console.log(currentTimeStamp + " " + lastTimestamp)
+    // deltaTime = (currentTimeStamp - lastTimestamp);
+    // lastTimestamp = currentTimeStamp;
+    //console.log(deltaTime)
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let i=0; i<numParticels; i++) {
-        particlesArr[i].update()
-        for (let j=0; j<numParticels; j++) {
+    for (let i=0; i<numParticles; i++) {
+        particlesArr[i].update(moveForce)
+        for (let j=0; j<numParticles; j++) {
             if (i!=j){
                 dist = Math.sqrt(Math.pow(particlesArr[j].x - particlesArr[i].x,2) + Math.pow(particlesArr[j].y - particlesArr[i].y,2))
                 if (dist < 175) {
@@ -66,16 +98,11 @@ function animate () {
             }
         }
     }
-    requestAnimationFrame(animate);
+    // requestAnimationFrame(animate);
 }
-animate();
 
-window.addEventListener("resize", function () {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    canvas.style.width = window.innerWidth;
-    canvas.style.height = window.innerHeight;
-});
+ //Temporary while I work on a fix with requestAnimationFrame - More efficient
+setInterval(animate,16);
 
 /*****INTRO SECTION ANIMATION*****/
 let animatedText1 = document.getElementById("animated-text-1")
@@ -163,15 +190,15 @@ homeLink.addEventListener("click", function () {
 })
 
 aboutMeLink.addEventListener("click", function () {
-    document.getElementById("about-me-anchor").scrollIntoView();
+    document.getElementById("about-me").scrollIntoView();
 })
 
 projectsLink.addEventListener("click", function () {
-    document.getElementById("projects-anchor").scrollIntoView();
+    document.getElementById("projects").scrollIntoView();
 })
 
 contactMeLink.addEventListener("click", function () {
-    document.getElementById("contact-me-anchor").scrollIntoView();
+    document.getElementById("contact-me").scrollIntoView();
 })
 
 /*****ABOUT ME BUTTON HANDLER*****/

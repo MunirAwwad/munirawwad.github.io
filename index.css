@@ -20,11 +20,11 @@ html {
 }
 
 body {
-    background-color: rgb(0,0,0);
+    background-color: #0d0d0f;
 }
 
 canvas {
-    background: rgb(0,0,0);
+    background: #0d0d0f;
     position: fixed;
     left: 0;
     top: 0;
@@ -35,7 +35,7 @@ canvas {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 4vw;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ canvas {
 /*Intro Section*/
 #intro {
     width: 100%;
-    height: 42.5vw;
+    height: 87.5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,14 +130,15 @@ canvas {
 
 /*About Me*/
 #about-me {
-    height: 42.5vw;
+    height: 90vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: whitesmoke;
     font-family: var(--FONT-STACK);
     padding: 2vw;
     text-shadow: black 0 0 20px;
+    scroll-margin: 6vh;
 }
 
 #about-me-anchor {
@@ -215,11 +216,15 @@ canvas {
 
 /*Projects*/
 #projects {
-    height: 42.5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
     color: whitesmoke;
     font-family: var(--FONT-STACK);
     padding: 2vw;
     text-shadow: black 0 0 20px;
+    scroll-margin: 6vh;
 }
 
 #projects-anchor {
@@ -300,7 +305,7 @@ canvas {
 
 /*Contact Me*/
 #contact-me {
-    height: 42.5vw;
+    height: 90vh;
     color: whitesmoke;
     font-family: var(--FONT-STACK);
     padding: 2vw;
@@ -471,4 +476,105 @@ form p {
 
 form p a, form p a:active, form p a:visited {
     color: whitesmoke;
+}
+
+@media (max-width: 1250px) {
+    #intro {
+        font-size: 6.25vw;
+    }
+
+    #animated-text-1, #animated-text-2 {
+        width: 75vw;
+        text-align: center;
+    }
+
+    #animated-text-3 {
+        font-size: 2vw;
+        width: 75vw;
+        text-align: center;
+    }
+
+    #intro-buttons-container button {
+        font-size: 2vw;
+        border-radius: 3vw;
+        border: solid 0.15vw whitesmoke;
+        padding: 1.5vw;
+    }
+
+    #header {
+        height: 6.25vh;
+        font-size: 2vw;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    #header {
+        height: 6.25vh;
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 750px) {
+    #intro {
+        font-size: 7vw;
+    }
+
+    #animated-text-1, #animated-text-2 {
+        width: 75vw;
+        text-align: center;
+    }
+
+    #animated-text-3 {
+        font-size: 2.5vw;
+        width: 75vw;
+        text-align: center;
+    }
+
+    #intro-buttons-container button {
+        font-size: 3vw;
+        border-radius: 3vw;
+        border: solid 0.15vw whitesmoke;
+        padding: 1.5vw;
+    }
+
+    #header {
+        height: 6.25vh;
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 700px) {
+    #header {
+        display: none;
+    }
+
+    #intro {
+        font-size: 8vw;
+    }
+
+    #animated-text-1, #animated-text-2 {
+        width: 80vw;
+        text-align: center;
+    }
+
+    #animated-text-3 {
+        font-size: 4vw;
+        width: 75vw;
+        text-align: center;
+        margin-top: 7.5vw;
+        margin-bottom: 7.5vw;
+    }
+
+    #intro-buttons-container button {
+        font-size: 4vw;
+        border-radius: 3.25vw;
+        border: solid 0.15vw whitesmoke;
+        padding: 2vw;
+    }
+
+    #intro-buttons-container {
+        flex-direction: column;
+        margin-top: 7.5vw;
+    }
 }
