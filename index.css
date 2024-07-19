@@ -136,7 +136,7 @@ canvas {
     align-items: center;
     color: whitesmoke;
     font-family: var(--FONT-STACK);
-    padding: 2vw;
+    padding: 3vw;
     text-shadow: black 0 0 20px;
     scroll-margin: 6vh;
 }
@@ -476,105 +476,4 @@ form p {
 
 form p a, form p a:active, form p a:visited {
     color: whitesmoke;
-}
-
-@media (max-width: 1250px) {
-    #intro {
-        font-size: 6.25vw;
-    }
-
-    #animated-text-1, #animated-text-2 {
-        width: 75vw;
-        text-align: center;
-    }
-
-    #animated-text-3 {
-        font-size: 2vw;
-        width: 75vw;
-        text-align: center;
-    }
-
-    #intro-buttons-container button {
-        font-size: 2vw;
-        border-radius: 3vw;
-        border: solid 0.15vw whitesmoke;
-        padding: 1.5vw;
-    }
-
-    #header {
-        height: 6.25vh;
-        font-size: 2vw;
-    }
-
-}
-
-@media (max-width: 1000px) {
-    #header {
-        height: 6.25vh;
-        font-size: 2.5vw;
-    }
-}
-
-@media (max-width: 750px) {
-    #intro {
-        font-size: 7vw;
-    }
-
-    #animated-text-1, #animated-text-2 {
-        width: 75vw;
-        text-align: center;
-    }
-
-    #animated-text-3 {
-        font-size: 2.5vw;
-        width: 75vw;
-        text-align: center;
-    }
-
-    #intro-buttons-container button {
-        font-size: 3vw;
-        border-radius: 3vw;
-        border: solid 0.15vw whitesmoke;
-        padding: 1.5vw;
-    }
-
-    #header {
-        height: 6.25vh;
-        font-size: 3vw;
-    }
-}
-
-@media (max-width: 700px) {
-    #header {
-        display: none;
-    }
-
-    #intro {
-        font-size: 8vw;
-    }
-
-    #animated-text-1, #animated-text-2 {
-        width: 80vw;
-        text-align: center;
-    }
-
-    #animated-text-3 {
-        font-size: 4vw;
-        width: 75vw;
-        text-align: center;
-        margin-top: 7.5vw;
-        margin-bottom: 7.5vw;
-    }
-
-    #intro-buttons-container button {
-        font-size: 4vw;
-        border-radius: 3.25vw;
-        border: solid 0.15vw whitesmoke;
-        padding: 2vw;
-    }
-
-    #intro-buttons-container {
-        flex-direction: column;
-        margin-top: 7.5vw;
-    }
 }

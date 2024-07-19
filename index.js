@@ -68,7 +68,6 @@ for (let i=0; i<numParticles; i++) {
     particlesArr.push(new Particle(Math.random()*canvas.width,Math.random()*canvas.height, avgScreenSize/1000))
 }
 
-//*************************FIX INITIALIZATION ISSUE*************************/
 // var lastTimestamp = 0;
 // var deltaTime = null;
 
@@ -101,7 +100,7 @@ function animate (/*currentTimeStamp*/) {
     // requestAnimationFrame(animate);
 }
 
- //Temporary while I work on a fix with requestAnimationFrame - More efficient
+//Temporary while I work on a fix with requestAnimationFrame - More efficient
 setInterval(animate,16);
 
 /*****INTRO SECTION ANIMATION*****/
