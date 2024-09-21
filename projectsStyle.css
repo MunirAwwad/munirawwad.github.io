@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: #151515;
+    padding: 3.75rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    color: whitesmoke;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.header-text {
+    margin-left: 2rem;
+    text-wrap: nowrap;
+}
+
+#sub-header-section {
+    padding-inline: 2.5rem;
+}
+
+.header a img {
+    height: 30px;
+    width: 30px;
+}
+
+.sub-header-text {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    margin-bottom: 3.75rem;
+}
+
+.sub-header-text a, .sub-header-text a:active, .sub-header-text a:visited {
+    color: whitesmoke;
+}
+
+
+#projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+#projects-container a, #projects-container a:visited, #projects-container a:active {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.project-card {
+    background-color: #151515;
+    width: fit-content;
+    border: solid 0.25rem #969696;
+    border-radius: 25px;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: 100ms;
+    cursor: pointer;
+}
+
+.project-img {
+    width: 30rem;
+    height: auto;
+    border: solid 0.25rem #969696;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.card-text {
+    width: 30rem;
+}
+
+.card-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-desc {
+    font-size: 1.325rem;
+    margin-bottom: 1rem;
+}
+
+.skills-used {
+    color: whitesmoke;
+    font-size: 1.325rem;
+    text-decoration: underline;
+}
+
+.skills-used-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills-used-list img {
+    height: 60px;
+    width: 60px;
+    user-select: none;
+}
+
+@media (max-width: 1300px) {
+    .project-card {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    #sub-header-section {
+        padding-inline: 1rem;
+    }
+}

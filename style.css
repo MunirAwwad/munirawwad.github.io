@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* :root {
+    --BLINKER1: "";
+    --BLINKER2: "";
+} */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: #151515;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+/* #nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+#nav-bar a {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-size: 1.625rem;
+} */
+
+#intro-box {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+#intro-box-text {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-size: 3rem;
+}
+
+/* @keyframes blink {
+    100% {color : rgba(255,255,255,0);}
+}
+
+#intro-box-text::after {
+    content: var(--BLINKER1);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} */
+
+#intro-box-sub-text {
+    color: rgb(150,150,150);
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-size: 1.825rem;
+}
+
+/* #intro-box-sub-text::after {
+    content: var(--BLINKER2);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} */
+
+#nav-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#nav-box button {
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    background-color: rgb(150,150,150);
+    font-size: 1.75rem;
+    width: 17.5rem;
+    padding: 1rem;
+    text-wrap: nowrap;
+    border-radius: 50px 50px 50px 50px;
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+#nav-box button:hover{
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 100ms;
+    cursor: pointer;
+}
+
+#nav-box button:active{
+    transform: scale(0.95);
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+#nav-box a {
+    text-decoration: none;
+    color: #151515;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+#contact-box a img {
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#contact-box img {
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#overlay-container {
+    display: relative;
+    height: 0;
+    width: 0;
+    z-index: 5;
+}
+
+#email-form-overlay {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: rgb(15,15,15);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    border: solid 0.25rem #969696;
+    border-radius: 1.5rem;
+    margin: 2rem;
+}
+
+#email-form-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+#close-overlay {
+    font-size: 75%;
+    cursor: pointer;
+}
+
+.email-form-input-fields {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    gap: 0.75rem;
+}
+
+.email-form-input-fields input {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    width: 75%;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.email-form-input-fields textarea {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    padding: 0.25rem;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border-radius: 25px 25px 25px 25px;
+    width: 75%;
+}
+
+#form-buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+#email-form-overlay button {
+    padding: 1rem;
+    background-color: rgb(15,15,15);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-size: 1.5rem;
+    border: solid 2.5px whitesmoke;
+    border-radius: 25px 25px 25px 25px;
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+#email-form-overlay button:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+#email-form-overlay button:active {
+    transform: scale(0.95);
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+#email-form-overlay p {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+#email-form-overlay p a, #email-form-overlay p a:visited, #email-form-overlay p a:hover, #email-form-overlay p a:active {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+@media (max-width: 805px) {
+    body {
+      flex-direction: column;
+    }
+    #intro-box {
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem
+    }
+}
+
+@media (max-width: 600px) {
+    .email-form-input-fields {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
