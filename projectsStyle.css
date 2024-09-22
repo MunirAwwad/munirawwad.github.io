@@ -150,3 +150,52 @@ body {
         padding-inline: 1rem;
     }
 }
+
+@media (max-width: 600px) {
+    .project-card {
+        padding: 5%;
+        gap: 2.5rem;
+    }
+    
+    .project-img {
+        width: 100%;
+        height: auto;
+        border: solid 0.25rem #969696;
+        border-radius: 25px;
+        box-sizing: border-box;
+    }
+    
+    .card-text {
+        width: 100%;
+    }
+    
+    .card-header {
+        font-size: 5.5vw;
+        margin-bottom: 4%;
+    }
+    
+    .card-desc {
+        font-size: 3.5vw;
+        margin-bottom: 4%;
+    }
+    
+    .skills-used {
+        color: whitesmoke;
+        font-size: 3.5vw;
+        text-decoration: underline;
+    }
+    
+    .skills-used-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 4%;
+        margin-top: 4%;
+    }
+    
+    .skills-used-list img {
+        height: 15%;
+        width: 15%;
+        user-select: none;
+    }
+}
