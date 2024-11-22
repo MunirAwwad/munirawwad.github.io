@@ -42,7 +42,7 @@ body {
 }
 
 #sub-header-section {
-    padding-inline: 2.5rem;
+    padding-inline: 4.25rem;
 }
 
 .sub-header-title {
@@ -91,8 +91,8 @@ body {
 }
 
 #skills-list img {
-    height: 75px;
-    width: 75px;
+    height: 80px;
+    width: 80px;
 }
 
 #skills-boxes {
@@ -107,8 +107,8 @@ body {
 }
 
 .skills-box {
-    width: 30rem;
-    height: 34rem;
+    width: 25rem;
+    height: 35rem;
     background-color: #151515;
     border: solid 0.25rem #969696;
     border-radius: 25px;
@@ -126,10 +126,15 @@ body {
    border-color: #969696;
 } */
 
+#skill-box-image {
+    height: 80px;
+    width: 80px;
+}
+
 .skill-title {
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace, sans-serif;
-    font-size: 1.825rem;
+    font-size: 1.75rem;
 }
 
 .skill-desc {
