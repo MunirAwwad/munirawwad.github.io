@@ -112,11 +112,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1.5rem;
     margin-top: 3rem;
 }
 
 .skills-box {
+    margin: 1.5rem;
     width: 25rem;
     height: 35rem;
     background-color: #151515;
