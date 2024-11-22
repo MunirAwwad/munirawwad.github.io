@@ -93,6 +93,16 @@ body {
 #skills-list img {
     height: 80px;
     width: 80px;
+    transition: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+#skills-list img:hover {
+    transform: scale(1.25);
+    transition: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
 }
 
 #skills-boxes {
@@ -135,12 +145,15 @@ body {
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-size: 1.75rem;
+    width: 20rem;
 }
 
 .skill-desc {
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-size: 1.325rem;
+    width: 20rem;
+    height: 17.5rem;
 }
 
 @media (max-width: 1000px) {
