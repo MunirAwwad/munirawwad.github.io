@@ -46,6 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2.125rem;
+    flex-wrap: wrap;
 }
 
 #in-progress img {
