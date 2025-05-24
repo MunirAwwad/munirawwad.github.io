@@ -36,6 +36,20 @@ body {
     text-wrap: nowrap;
 }
 
+.header a img {
+    height: 30px;
+    width: 30px;
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+.header a img:hover {
+    transform: scale(1.25);
+    transition-property: transform;
+    transition-duration: 100ms;
+    cursor: pointer;
+}
+
 #in-progress {
     margin-top: 5rem;
     color: #969696;

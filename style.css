@@ -136,13 +136,31 @@ body {
     width: 2.5rem;
     cursor: pointer;
     user-select: none;
+    /* transition-property: transform;
+    transition-duration: 100ms; */
 }
+
+/* #contact-box a img:hover {
+    transform: scale(1.25);
+    transition-property: transform;
+    transition-duration: 100ms;
+    cursor: pointer;
+} */
 
 #contact-box img {
     height: 2.5rem;
     width: 2.5rem;
     cursor: pointer;
     user-select: none;
+    transition-property: transform;
+    transition-duration: 100ms;
+}
+
+#contact-box img:hover {
+    transform: scale(1.25);
+    transition-property: transform;
+    transition-duration: 100ms;
+    cursor: pointer;
 }
 
 #overlay-container {
