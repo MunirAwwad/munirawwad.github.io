@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Munir's Personal Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="intro-section">
+            <div id="intro-box">
+                <div id="intro-box-text">
+                    Hello, I'm <span class="rp">Munir</span>!
+                </div>
+                <div id="intro-box-sub-text">
+                    A third-year university student enrolled in the Honours Computer Science CO-OP program at McMaster University. Welcome to my website!
+                </div>
+                <div id="contact-box">
+                    <a href="https://www.linkedin.com/in/munirawwad/" target="_blank"><img src="logos/linkedin-logo-pink-fill.png" alt="linkedinLogo" height="40px" width="40px"></a>
+                    <a href="https://github.com/MunirAwwad/" target="_blank"><img src="logos/github-logo-pink-fill.png" alt="githubLogo" height="40px" width="40px"></a>
+                    <a href="https://leetcode.com/u/03_Munir_03/" target="_blank"><img src="logos/leetcode-logo-pink-fill.png" alt="leetcodeLogo" height="40px" width="40px"></a>
+                    <a href="#email-me-anchor"><img id="email-me-button" src="logos/mail-logo-pink-fill.png" alt="githubLogo" height="40px" width="40px"></a>
+                </div>
+            </div>
+            <div id="nav-box">
+                <a href="#about-section-anchor"><button class="nav-button">About Me</button></a>
+                <a href="#projects-section-anchor"><button class="nav-button">Projects</button></a>
+            </div>
+            <div id="scroll-animation-box">
+                <div id="scroll-animation-ball" class="animate"></div>
+            </div>
+        </div>
+        <div id="about-section">
+            <div id="about-section-anchor"></div>
+            <div id="about-sub-container">
+                <div id="about-col-1">
+                    <div class="section-header">About Me</div>
+                    <div id="about-text">Hello, I'm Munir! A third-year university student enrolled in the Honours Computer Science CO-OP program at McMaster University. I’ve always had a passion for computers, which made pursuing a career in computer science a natural choice. I’m currently seeking a full-time co-op position for Fall 2025 where I can take on new challenges and apply my skill set in a real-world professional setting.</div>
+                    <a href="docs/Resume_MunirAwwad.pdf" download="Resume_MunirAwwad.pdf"><button id="resume"><img src="misc/resume.png" alt="resume.png"/>Resume</button></a>
+                </div>
+                <div id="about-col-2">
+                        <div id="tech-stack-title">My Tech Stack</div>
+                        <div id="skills-list">
+                            <img src="logos/python-logo.png" alt="python-logo.png" title="Python" height="60px" width="60px">
+                            <img src="logos/java-logo.png" alt="java-logo.png" title="Java" height="60px" width="60px">
+                            <img src="logos/c-logo.png" alt="c-logo.png" title="C" height="60px" width="60px">
+                            <img src="logos/csharp-logo.png" alt="c-logo.png" title="C#" height="60px" width="60px">
+                            <img src="logos/html5.png" alt="html5.png" title="HTML" height="60px" width="60px">
+                            <img src="logos/css3.png" alt="css3.png" title="CSS" height="60px" width="60px">
+                            <img src="logos/js.png" alt="js.png" title="JavaScript" height="60px" width="60px">
+                            <img src="logos/react-js-logo.png" alt="react-js-logo.png" title="React.JS" height="60px" width="60px">
+                            <img src="logos/react-native-logo.png" alt="react-native-logo.png" title="React Native" height="60px" width="60px">
+                            <img src="logos/sql-logo.png" alt="sql-logo.png" title="SQL" height="60px" width="60px">
+                            <img src="logos/php-logo.png" alt="php-logo.png" height="60px" title="PHP" width="60px">
+                            <img src="logos/haskell-logo.png" alt="haskell-logo.png" title="Haskell" height="60px" width="60px">
+                            <img src="logos/bash-logo.png" alt="bash-logo.png" title="Bash" height="60px" width="60px">
+                            <img src="logos/r-logo.png" alt="r-logo.png" title="R" height="60px" width="60px">
+                            <img src="logos/julia-logo.png" alt="julia-logo.png" title="Julia" height="60px" width="60px">
+                        </div>
+                        <!-- <div id="tools-title">My Tools</div>
+                        <div id="tools-list">
+                            <img src="logos/vscode-logo.png" alt="vscode-logo.png" title="Visual Studio Code" height="50px" width="50px">
+                            <img src="logos/git-logo-red-white-bg.png" alt="git-logo.png" title="Git" height="55px" width="55px">
+                            <img src="logos/dbeaver-logo.png" alt="markdown-logo.png" title="DBeaver" height="60px" width="60px">
+                            <img src="logos/ibm-db2-logo.png" alt="markdown-logo.png" title="IBM Db2" height="55px" width="55px">
+                            <img src="logos/cisco-packet-tracer-logo.png" alt="markdown-logo.png" title="Cisco Packet Tracer" height="60px" width="60px">
+                            <img src="logos/markdown-logo.png" alt="markdown-logo.png" title="Markdown" height="45px" width="65px">
+                        </div> -->
+                    </div>
+            </div>
+        </div>
+        <div id="projects-section">
+            <div id="projects-section-anchor"></div>
+            <div class="header-handler">
+                <div class="col1">
+                    <div class="section-header" id="projects-title">Personal Projects</div>
+                </div>
+                <div class="col2">
+                </div>
+            </div>
+            <div id="projects-text">Below is a list of personal passion projects that I've worked on in my free time, the code for all of these projects can be found on my Github account <a>here!</a></div>
+            <div id="project-cards">
+                <div class="project-card">
+                    <div class="project-card-title">Weather App</div>
+                    <img src="images/WA.png" alt="WA.png" height="188" width="300"/>
+                    <div class="project-card-desc">A weather app for Android that allows users to input city names and utilizes asynchronous API calls to retrieve geocoding and weather data to be displayed.</div>
+                    <div class="skills-used-list">
+                        <img src="logos/react-native-logo.png" alt="react-native.png" height="60px" width="60px">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-title">To-Do List Google Chrome Extension</div>
+                    <img src="images/TDLE.png" alt="TDLE.png" height="188" width="300"/>
+                    <div class="project-card-desc">A Google Chrome extension to help users manage tasks and track task progress from within the browser.</div>
+                    <div class="skills-used-list">
+                        <img style="margin-left: -0.5rem;" src="logos/html5.png" alt="html5.png" height="60px" width="60px">
+                        <img src="logos/css3.png" alt="css3.png" height="60px" width="60px">
+                        <img src="logos/js.png" alt="js.png" height="60px" width="60px">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-title">9x9 Sudoku Solver</div>
+                    <img src="images/SS.png" alt="SS.png" height="188" width="300"/>
+                    <div class="project-card-desc">A non-brute-force algorithm for solving standard 9x9 Sudoku puzzles by procedural candidate elimination. Web interface allows users to input custom puzzles to be solved by the algorithm.</div>
+                    <div class="skills-used-list">
+                        <img style="margin-left: -0.5rem;" src="logos/html5.png" alt="html5.png" height="60px" width="60px">
+                        <img src="logos/css3.png" alt="css3.png" height="60px" width="60px">
+                        <img src="logos/js.png" alt="js.png" height="60px" width="60px">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-title">This Website</div>
+                    <img src="images/WB.png" alt="WB.png" height="188" width="300"/>
+                    <div class="project-card-desc">My personal portfolio website.</div>
+                    <div class="skills-used-list">
+                        <img style="margin-left: -0.5rem;" src="logos/html5.png" alt="html5.png" height="60px" width="60px">
+                        <img src="logos/css3.png" alt="css3.png" height="60px" width="60px">
+                        <img src="logos/js.png" alt="js.png" height="60px" width="60px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="email-section">
+            <div class="header-handler">
+                <div class="col1">
+                    <div class="section-header">Email Me</div>
+                </div>
+                <div class="col2">
+                </div>
+            </div>
+            <form action="https://formspree.io/f/mknlwwkv" method="POST">
+                <div id="email-me-anchor"></div>
+                <div id="form-top-row">
+                    <div class="email-form-input-fields">
+                        <input type="text" id="name" name="Name" placeholder="Name" required>
+                    </div>
+                    <div class="email-form-input-fields">
+                        <input type="email" id="email" name="Email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="email-form-input-fields">
+                    <!-- <input type="text" id="subject" name="Subject" placeholder="Subject" required> -->
+                    <textarea id="subject" name="Subject" cols="50" rows="1" placeholder="Subject" required></textarea>
+                </div>
+                <div class="email-form-input-fields">
+                    <textarea id="msg" name="Message" cols="50" rows="7" placeholder="Message" required></textarea>
+                </div>
+                <div id="form-buttons-container">
+                    <button type="submit" name="submit" id="submit">Send</button>
+                    <button id="clear-button" type="reset" name="reset" id="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
