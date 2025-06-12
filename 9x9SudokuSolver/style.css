@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    padding: 1.5rem;
+}
+
+/*HEADER SECTION*/
+#header {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#header h1 {
+    font-family: "Yatra One", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/*MIDDLE SECTION*/
+#main-container {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#text-container {   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: fit-content;
+    width: 50rem;
+    margin-bottom: 5rem;
+}
+
+#text-container h2 {
+    font-family: "Yatra One", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#text-container h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#text-container a, #text-container a:active{
+    color : red;
+}   
+
+#text-container a:hover {
+    color : palevioletred;
+}
+
+#lists-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding : 1rem;
+    margin-bottom: 1rem;
+}
+
+#lists-container li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
+
+#solver-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+}
+
+table {
+    border: solid 0.5rem black;
+    border-collapse: collapse;
+}
+
+tr:nth-child(3), tr:nth-child(6) {
+    border-bottom: solid 0.5rem black;
+}
+
+td {
+    height: 4.25rem;
+    width: 4.25rem;
+    border: solid 0.2rem black;
+}
+
+td:nth-child(3), td:nth-child(6) {
+    border-right: solid 0.5rem black;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#value-error {
+    font-size: 1.5rem;
+    font-family: "Yatra One", Arial, Helvetica, sans-serif;
+    color: red;
+    display: none;
+    text-align: center;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+button {
+    font-size: 2rem;
+    font-family: "Yatra One";
+    padding: 0.5rem 1rem;
+    background-color: bisque;
+    border: solid 0.25rem black;
+    border-radius: 1rem;
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+    transition-property: transform;
+    transition-duration: 0.1s;
+}
+
+/*Responsiveness for phones*/
+@media (max-width: 700px) {
+    #header {
+        margin-bottom: 2vw;
+    }
+    
+    #header h1 {
+        font-size: 7.5vw;
+    }
+
+    #main-container {
+        gap: 10vw;
+    }
+
+    #solver-container {
+        gap : 5vw;
+    }
+    
+    table {
+        border: solid 1.25vw black;
+    }
+    
+    tr:nth-child(3), tr:nth-child(6) {
+        border-bottom: solid 1.25vw black;
+    }
+    
+    td {
+        height: 10vw;
+        width: 10vw;
+        border: solid 0.5vw black;
+    }
+    
+    td:nth-child(3), td:nth-child(6) {
+        border-right: solid 1.25vw black;
+    }
+    
+    input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: white;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    #buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+    }
+    
+    button {
+        font-size: 5vw;
+        font-family: "Yatra One";
+        padding: 1vw 2vw;
+        background-color: bisque;
+        border: solid 0.75vw black;
+        border-radius: 2vw;
+        transition-property: transform;
+        transition-duration: 0.1s;
+    }
+    
+    #text-container {   
+        width: auto;
+    }
+
+    #value-error {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    #text-container h2 {
+        font-size: 6vw;
+    }
+    
+    #text-container h3 {
+        font-size: 4.5vw;
+    }
+    
+    #lists-container li {
+        font-size: 4.5vw;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    
+    #lists-container {
+        flex-direction: column;
+        gap: 5vw;
+    }
+    
+}

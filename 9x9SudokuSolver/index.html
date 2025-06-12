@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>9x9 Sudoku Solver</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.PNG">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="filter">
+            <div id="header">
+                <h1>9x9 Sudoku Solver</h1>
+            </div>
+            <div id="main-container">
+                <div id="solver-container">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                                <td><input type="text" maxlength="1"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="value-error">*All entries must be single-digit numbers between 1 and 9</p>
+                    <div id="buttons-container">
+                        <button id="solve-button">Solve</button>
+                        <button id="clear-button">Reset</button>
+                    </div>
+                </div>
+                <div id="text-container">
+                    <h2>Welcome to my Sudoku Solver!</h2>   
+                    <h3>This is a passion project made by <a href="https://munirawwad.github.io/">me</a> in my free time! It is still a work in progress and will continuously be updated as I improve and build upon the solving algorithm. The current code for this project can be found <a href="https://github.com/MunirAwwad/9x9-Sudoku-Solver" target="_blank">here</a>.</h3> 
+                    <h2>How does it work?</h2>
+                    <h3>This Sudoku solver uses a non-brute-force algorithm to solve a standard 9x9 Sudoku board using popular Sudoku solving techniques to find and eliminate possibilities and fill cell values. Currently, the methods implemented are:</h3> 
+                    <div id="lists-container">
+                        <ul>
+                            <li>Naked Singles</li>
+                            <li>Hidden Singles</li>
+                            <li>Naked Pairs</li>
+                            <li>Hidden Pairs</li>
+                        </ul>
+                        <ul>
+                            <li>Pointing Pairs</li>
+                            <li>Claiming Pairs</li>
+                            <li>X-Wing</li>
+                            <li>Y-Wing</li>
+                        </ul>
+                        <ul>
+                            <li>Swordfish</li>
+                            <li>Naked Triplets</li>
+                            <li>Hidden Triplets</li>
+                            <li>Pointing Triplets</li>
+                        </ul>
+                    </div>
+                    <h2>Notes:</h2>
+                    <h3>1. This algorithm only solves puzzles with one possible solution, not multiple.</h3>
+                    <h3>2. This algorithm only solves puzzles completable using the implemented methods listed above.</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
