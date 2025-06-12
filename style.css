@@ -151,7 +151,7 @@ body {
 
 .animate {
   animation-name: slide;
-  animation-duration: 1.625s;
+  animation-duration: 1.25s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: infinite;
