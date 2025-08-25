@@ -539,6 +539,18 @@ form button {
     gap: 1.5rem;
 }
 
+@media (max-width: 1370px) {
+    html {
+        font-size: 95%;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 90%;
+    }
+}
+
 @media (max-width: 900px) {
 
     .section-header {
@@ -563,6 +575,10 @@ form button {
 
     #intro-box {
         align-items: center;
+    }
+
+    #contact-box {
+        margin-block: 1rem;
     }
 
     #scroll-animation-box {
