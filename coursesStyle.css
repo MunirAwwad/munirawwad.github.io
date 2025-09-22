@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --FONT-STACK: monospace, 'Courier New', Courier, sans-serif;
+    --THEME-PINK: #fd013e;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: #151515;
+    padding: 2.5%;
+}
+
+#courses-title {
+    color: var(--THEME-PINK);
+    font-family: var(--FONT-STACK);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-decoration: underline;
+}
+
+ul {
+    margin-bottom: 2rem;
+}
+
+li {
+    color: whitesmoke;
+    font-family: var(--FONT-STACK);
+    font-size: 1.5rem;    
+    margin-left: 5rem;
+}
+
+@media (max-width: 1450px) {
+    html {
+        font-size: 95%;
+    }
+}
+
+@media (max-width: 1375px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1250px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 65%;
+    }
+}
