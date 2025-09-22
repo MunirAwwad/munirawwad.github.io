@@ -8,23 +8,29 @@
     </head>
     <body>
         <div id="intro-section">
-            <div id="intro-box">
-                <div id="intro-box-text">
-                    Hello, I'm <span class="rp">Munir</span>!
+            <div id="intro-section-main-content">
+                <img id="personal-photo" src="images/PersonalPhoto.JPG" alt="PersonalPhoto" height="370px" width="370px">
+                <div id="intro-box">
+                    <div id="intro-box-text">
+                        Hello, I'm <span class="rp">Munir</span>!
+                    </div>
+                    <div id="intro-box-sub-text">
+                        A fourth-year university student enrolled in the Honours Computer Science Co-op program at McMaster University, currently on co-op as a Software Analyst Intern at Hitachi Rail. Welcome to my website!
+                    </div>
+                    <div id="contact-box">
+                        <a href="https://www.linkedin.com/in/munirawwad/" target="_blank"><img src="logos/linkedin-logo-pink-fill.png" alt="linkedinLogo" height="40px" width="40px"></a>
+                        <a href="https://github.com/MunirAwwad/" target="_blank"><img src="logos/github-logo-pink-fill.png" alt="githubLogo" height="40px" width="40px"></a>
+                        <a href="https://leetcode.com/u/03_Munir_03/" target="_blank"><img src="logos/leetcode-logo-pink-fill.png" alt="leetcodeLogo" height="40px" width="40px"></a>
+                        <a href="#email-me-anchor"><img id="email-me-button" src="logos/mail-logo-pink-fill.png" alt="githubLogo" height="40px" width="40px"></a>
+                    </div>
                 </div>
-                <div id="intro-box-sub-text">
-                    A third-year university student enrolled in the Honours Computer Science CO-OP program at McMaster University. Welcome to my website!
-                </div>
-                <div id="contact-box">
-                    <a href="https://www.linkedin.com/in/munirawwad/" target="_blank"><img src="logos/linkedin-logo-pink-fill.png" alt="linkedinLogo" height="40px" width="40px"></a>
-                    <a href="https://github.com/MunirAwwad/" target="_blank"><img src="logos/github-logo-pink-fill.png" alt="githubLogo" height="40px" width="40px"></a>
-                    <a href="https://leetcode.com/u/03_Munir_03/" target="_blank"><img src="logos/leetcode-logo-pink-fill.png" alt="leetcodeLogo" height="40px" width="40px"></a>
-                    <a href="#email-me-anchor"><img id="email-me-button" src="logos/mail-logo-pink-fill.png" alt="githubLogo" height="40px" width="40px"></a>
-                </div>
-            </div>
-            <div id="nav-box">
-                <a href="#about-section-anchor"><button class="nav-button">About Me</button></a>
-                <a href="#projects-section-anchor"><button class="nav-button">Projects</button></a>
+                <!-- <div id="nav-box">
+                    <a href="#about-section-anchor"><button class="nav-button">About Me</button></a>
+                    <a href="#education-anchor"><button class="nav-button">Education</button></a>
+                    <a href="#work-experience-anchor"><button class="nav-button">Work Experience</button></a>
+                    <a href="#certificates-anchor"><button class="nav-button">Certificates</button></a>
+                    <a href="#projects-section-anchor"><button class="nav-button">Projects</button></a>
+                </div> -->
             </div>
             <div id="scroll-animation-box" onclick="document.getElementById('about-section-anchor').scrollIntoView({ behavior: 'smooth' })">
                 <div id="scroll-animation-ball" class="animate"></div>
@@ -35,49 +41,120 @@
             <div id="about-sub-container">
                 <div id="about-col-1">
                     <div class="section-header">About Me</div>
-                    <div id="about-text">Hello, I'm Munir! A third-year university student enrolled in the Honours Computer Science CO-OP program at McMaster University. I’ve always had a passion for computers, which made pursuing a career in computer science a natural choice. I’m currently seeking a full-time co-op position for Fall 2025 where I can take on new challenges and apply my skill set in a real-world professional setting.</div>
-                    <a href="misc/Resume_MunirAwwad.pdf" download="Resume_MunirAwwad.pdf"><button id="resume"><img src="misc/resume.png" alt="resume.png"/>Resume</button></a>
+                    <div id="about-text">Hello, I'm Munir! A fourth-year university student enrolled in the Honours Computer Science CO-OP program at McMaster University. I’ve always had a passion for computers, which made pursuing a career in computer science a natural choice. I am currently completing a 12-month co-op as a Software Analyst Intern at Hitachi Rail, and am excited to learn, grow, and contribute within a global organization that’s shaping the future of transportation.</div>
+                    <button id="resume" onclick="downloadResume()"><img src="misc/resume.png" alt="resume.png"/>Resume</button>
                 </div>
                 <div id="about-col-2">
-                        <div id="tech-stack-title">My Tech Stack</div>
-                        <div id="skills-list">
-                            <img src="logos/python-logo.png" alt="python-logo.png" title="Python" height="60px" width="60px">
-                            <img src="logos/java-logo.png" alt="java-logo.png" title="Java" height="60px" width="60px">
-                            <img src="logos/c-logo.png" alt="c-logo.png" title="C" height="60px" width="60px">
-                            <img src="logos/csharp-logo.png" alt="c-logo.png" title="C#" height="60px" width="60px">
-                            <img src="logos/html5.png" alt="html5.png" title="HTML" height="60px" width="60px">
-                            <img src="logos/css3.png" alt="css3.png" title="CSS" height="60px" width="60px">
-                            <img src="logos/js.png" alt="js.png" title="JavaScript" height="60px" width="60px">
-                            <img src="logos/react-js-logo.png" alt="react-js-logo.png" title="React.JS" height="60px" width="60px">
-                            <img src="logos/react-native-logo.png" alt="react-native-logo.png" title="React Native" height="60px" width="60px">
-                            <img src="logos/sql-logo.png" alt="sql-logo.png" title="SQL" height="60px" width="60px">
-                            <img src="logos/php-logo.png" alt="php-logo.png" height="60px" title="PHP" width="60px">
-                            <img src="logos/haskell-logo.png" alt="haskell-logo.png" title="Haskell" height="60px" width="60px">
-                            <img src="logos/bash-logo.png" alt="bash-logo.png" title="Bash" height="60px" width="60px">
-                            <img src="logos/r-logo.png" alt="r-logo.png" title="R" height="60px" width="60px">
-                            <img src="logos/julia-logo.png" alt="julia-logo.png" title="Julia" height="60px" width="60px">
-                        </div>
-                        <!-- <div id="tools-title">My Tools</div>
-                        <div id="tools-list">
-                            <img src="logos/vscode-logo.png" alt="vscode-logo.png" title="Visual Studio Code" height="50px" width="50px">
-                            <img src="logos/git-logo-red-white-bg.png" alt="git-logo.png" title="Git" height="55px" width="55px">
-                            <img src="logos/dbeaver-logo.png" alt="markdown-logo.png" title="DBeaver" height="60px" width="60px">
-                            <img src="logos/ibm-db2-logo.png" alt="markdown-logo.png" title="IBM Db2" height="55px" width="55px">
-                            <img src="logos/cisco-packet-tracer-logo.png" alt="markdown-logo.png" title="Cisco Packet Tracer" height="60px" width="60px">
-                            <img src="logos/markdown-logo.png" alt="markdown-logo.png" title="Markdown" height="45px" width="65px">
-                        </div> -->
+                    <div id="tech-stack-title">My Tech Stack</div>
+                    <div id="skills-list">
+                        <img src="logos/python-logo.png" alt="python-logo.png" title="Python" height="50px" width="50px">
+                        <img src="logos/java-logo.png" alt="java-logo.png" title="Java" height="50px" width="50px">
+                        <img src="logos/csharp-logo.png" alt="c-logo.png" title="C#" height="50px" width="50px">
+                        <img src="logos/c-logo.png" alt="c-logo.png" title="C" height="50px" width="50px">
+                        <img src="logos/html5.png" alt="html5.png" title="HTML" height="50px" width="50px">
+                        <img src="logos/css3.png" alt="css3.png" title="CSS" height="50px" width="50px">
+                        <img src="logos/js.png" alt="js.png" title="JavaScript" height="50px" width="50px">
+                        <img src="logos/nodejs.png" alt="nodejs.png" title="NodeJS" height="50px" width="50px">
+                        <img src="logos/react-js-logo.png" alt="react-js-logo.png" title="React.JS" height="50px" width="50px">
+                        <img src="logos/react-native-logo.png" alt="react-native-logo.png" title="React Native" height="50px" width="50px">
+                        <img src="logos/jest.png" alt="jest.png" title="Jest" height="45px" width="45px">
+                        <img src="logos/vitest.png" alt="vitest.png" title="Vitest" height="45px" width="45px">
+                        <img src="logos/playwright.png" alt="playwright.png" title="Playwright" height="45px" width="45px">
+                        <img src="logos/sql-logo.png" alt="sql-logo.png" title="SQL" height="50px" width="50px">
+                        <img src="logos/php-logo.png" alt="php-logo.png" height="50px" title="PHP" width="50px">
+                        <img src="logos/haskell-logo.png" alt="haskell-logo.png" title="Haskell" height="50px" width="50px">
+                        <img src="logos/bash-logo.png" alt="bash-logo.png" title="Bash" height="50px" width="50px">
+                        <img src="logos/markdown-logo.png" alt="markdown-logo.png" title="Markdown" height="35px" width="55px">
+                        <img src="logos/r-logo.png" alt="r-logo.png" title="R" height="50px" width="50px">
+                        <img src="logos/julia-logo.png" alt="julia-logo.png" title="Julia" height="50px" width="50px">
                     </div>
+                    <div id="tools-title">My Tools</div>
+                    <div id="tools-list">
+                        <img src="logos/vscode-logo.png" alt="vscode-logo.png" title="Visual Studio Code" height="40px" width="40px">
+                        <img src="logos/git-logo-red-white-bg.png" alt="git-logo.png" title="Git" height="45px" width="45px">
+                        <img src="logos/bitbucket.png" alt="bitbucket.png" title="Bitbucket" height="40px" width="40px">
+                        <img src="logos/jira.png" alt="jira.png" title="Jira" height="45px" width="45px">
+                        <img src="logos/dbeaver-logo.png" alt="markdown-logo.png" title="DBeaver" height="50px" width="50px">
+                        <img src="logos/ibm-db2-logo.png" alt="markdown-logo.png" title="IBM Db2" height="45px" width="45px">
+                        <img src="logos/cisco-packet-tracer-logo.png" alt="markdown-logo.png" title="Cisco Packet Tracer" height="50px" width="50px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="work-experience-section">
+            <div id="work-experience-anchor"></div>
+            <div class="section-header">Work Experience</div>
+            <div class="work-item">
+                <div class="work-title">
+                    <span class="work-title-text-and-img">
+                        <img src="logos/hitachi.jpg" height="90px" width="90px"></img>
+                        <span class="work-title-text">
+                            <div class="work-item-title">Software Analyst Intern</div>
+                            <div class="work-company">Hitachi Rail</div>
+                            <div class="work-location">Toronto, Ontario, Canada</div>
+                        </span>
+                    </span>
+                    <span class="work-length">Sept 2025 - Present (<span id="n-1">n</span> month<span id="s-1">s</span>)</span>
+                </div>
+            </div>
+        </div>
+        <div id="education-section">
+            <div id="education-anchor"></div>
+            <div class="section-header" id="education-section-title">Education</div>
+            <div class="education-item">
+                <div class="education-title">
+                    <span class="education-title-text-and-img">
+                        <img src="logos/mcmaster.jpg" height="90px" width="90px"></img>
+                        <span class="education-title-text">
+                            <div class="education-item-title">B.A.Sc Honours Computer Science Co-op</div>
+                            <div class="education-company">McMaster University</div>
+                            <div class="education-location">Hamilton, Ontario, Canada</div>
+                        </span>
+                    </span>
+                    <span class="education-length">Sept 2022 - Apr 2027 (Expected)</span>
+                </div>
+                <ul class="education-notes">
+                    <li>GPA: 3.79/4.00</li>
+                    <li>Awarded the University Senate Scholarship for attainining a high Fall-Winter average in the 2024-2025 academic year.</li>
+                    <li>Achieved a spot on the Dean's Honor List for maintaining a CGPA of at least 3.50/4.00 for the 2nd assessment period (60 academic units completed).</li>
+                    <li>Achieved a spot on the Dean's Honor List for maintaining a CGPA of at least 3.50/4.00 for the 1st assessment period (30 academic units completed).</li>
+                    <li><a href="courses.html">List of Courses</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="certificates-section">
+            <div id="certificates-anchor"></div>
+            <div class="section-header">Certificates</div>
+            <div class="certificates-item">
+                <div class="certificates-title">
+                    <span class="certificates-title-text-and-img">
+                        <img src="logos/udemy.jpg" height="90px" width="90px"></img>
+                        <span class="certificates-title-text">
+                            <a target="_blank" href="https://www.udemy.com/certificate/UC-664457d1-c25f-4791-9a04-47f53c4d09e3/"><div class="certificates-item-title">Playwright: Web Automation Testing From Zero to Hero</div></a>
+                            <div class="certificates-company">Udemy</div>
+                            <div class="certificates-location">Skills: Playwright For JavaScript End-To-End Testing</div>
+                        </span>
+                    </span>
+                    <span class="certificates-length">Sept 2025</span>
+                </div>
+            </div>
+            <div class="certificates-item">
+                <div class="certificates-title">
+                    <span class="certificates-title-text-and-img">
+                        <img src="logos/udemy.jpg" height="90px" width="90px"></img>
+                        <span class="certificates-title-text">
+                            <a target="_blank" href="https://www.udemy.com/certificate/UC-ad9c15d4-9e1d-48ab-9069-88d166a0901b/"><div class="certificates-item-title">JavaScript Unit Testing - The Practical Guide</div></a>
+                            <div class="certificates-company">Udemy</div>
+                            <div class="certificates-location">Skills: Vitest and Jest For JavaScript Unit Testing</div>
+                        </span>
+                    </span>
+                    <span class="certificates-length">Sept 2025</span>
+                </div>
             </div>
         </div>
         <div id="projects-section">
             <div id="projects-section-anchor"></div>
-            <div class="header-handler">
-                <div class="col1">
-                    <div class="section-header" id="projects-title">Personal Projects</div>
-                </div>
-                <div class="col2">
-                </div>
-            </div>
+            <div class="section-header" id="projects-title">Personal Projects</div>
             <div id="projects-text">Below is a list of personal passion projects that I've worked on in my free time, the code for all of these projects can be found on my Github account <a>here!</a></div>
             <div id="project-cards">
                 <a href="https://github.com/MunirAwwad/WeatherApp">
@@ -127,15 +204,9 @@
             </div>
         </div>
         <div id="email-section">
-            <div class="header-handler">
-                <div class="col1">
-                    <div class="section-header">Email Me</div>
-                </div>
-                <div class="col2">
-                </div>
-            </div>
+            <div id="email-me-anchor"></div>
+            <div class="section-header">Email Me</div>
             <form action="https://formspree.io/f/mknlwwkv" method="POST">
-                <div id="email-me-anchor"></div>
                 <div id="form-top-row">
                     <div class="email-form-input-fields">
                         <input type="text" id="name" name="Name" placeholder="Name" required>
@@ -145,7 +216,6 @@
                     </div>
                 </div>
                 <div class="email-form-input-fields">
-                    <!-- <input type="text" id="subject" name="Subject" placeholder="Subject" required> -->
                     <textarea id="subject" name="Subject" cols="50" rows="1" placeholder="Subject" required></textarea>
                 </div>
                 <div class="email-form-input-fields">
