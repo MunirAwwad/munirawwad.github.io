@@ -815,7 +815,7 @@ form button {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;    
+        align-items: center;   
     }
 
     #about-col-1 a {
@@ -855,6 +855,41 @@ form button {
     }
 }
 
+@media (max-width: 820px) {
+    .work-title-text-and-img, .work-title, .education-title-text-and-img, .education-title, .certificates-title-text-and-img, .certificates-title {
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .work-title-text, .education-title-text, .certificates-title-text {
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 0;
+        width: 100%;
+        text-align: center;
+        gap: 0.325rem;
+        margin-bottom: 0.325rem;
+    }
+
+    .education-notes {
+        text-align: center;
+        list-style-position: inside;
+
+    }
+    .education-notes li {
+        margin-inline: 0;
+    }
+}
+
+@media (max-width: 684px) {
+    body {
+        margin-top: 7.5%;
+    }
+}
+
 @media (max-width: 550px) {
     html {
         font-size: 75%;
@@ -863,12 +898,12 @@ form button {
 
 @media (max-width: 500px) {
     html {
-        font-size: 70%;
+        font-size: 72.5%;
     }
 }
 
 @media (max-width: 400px) {
     html {
-        font-size: 65%;
+        font-size: 67.5%;
     }
 }
