@@ -561,7 +561,8 @@ body {
 }
 
 #projects-section a {
-    text-decoration: none;
+    text-decoration: underline;
+    color: var(--THEME-PINK);
 }
 
 #projects-section-anchor {
