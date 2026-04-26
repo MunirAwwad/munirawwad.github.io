@@ -73,47 +73,6 @@ body {
     color: var(--THEME-PINK);
 }
 
-#nav-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-#nav-box button {
-    color: var(--THEME-PINK);
-    font-family: var(--FONT-STACK);
-    background-color: #101010;
-    font-size: 1.75rem;
-    width: 17.5rem;
-    padding: 1rem;
-    text-wrap: nowrap;
-    border-radius: 50px 50px 50px 50px;
-    box-shadow: 0 0 15px var(--THEME-PINK);
-    border: none;
-    transition-property: transform;
-    transition-duration: 100ms;
-}
-
-#nav-box button:hover{
-    transform: scale(1.1);
-    transition-property: transform;
-    transition-duration: 100ms;
-    cursor: pointer;
-}
-
-#nav-box button:active{
-    transform: scale(0.95);
-    transition-property: transform;
-    transition-duration: 100ms;
-}
-
-#nav-box a {
-    text-decoration: none;
-    color: #151515;
-}
-
 #contact-box {
     display: flex;
     justify-content: flex-start;
