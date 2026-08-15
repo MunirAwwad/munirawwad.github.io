@@ -1,7 +1,7 @@
 function downloadResume() {
     const link = document.createElement('a');
-    link.href = 'misc/Resume_MunirAwwad.pdf';
-    link.download = 'Resume_MunirAwwad.pdf';
+    link.href = 'misc/Resume_MunirAwwad_For_Website.pdf';
+    link.download = 'Resume_MunirAwwad_For_Website.pdf';
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
