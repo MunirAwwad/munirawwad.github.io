@@ -369,6 +369,28 @@ body {
     font-size: 1.25rem;
 }
 
+.work-notes {
+    margin-top: 1rem;
+}
+
+.work-notes li {
+    font-size: 1.25rem;
+    margin-left: 8.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.work-notes li:last-child {
+    margin-bottom: 0;
+}
+
+.work-notes a, .work-notes a:visited {
+    color: rgb(150,150,150);
+}
+
+.work-notes a:hover, .work-notes a:active {
+    color: whitesmoke;
+}
+
 #education-section {
     display: flex;
     flex-direction: column;
@@ -834,14 +856,16 @@ form button {
         margin-bottom: 0.325rem;
     }
 
-    .education-notes {
+    .work-notes, .education-notes {
         text-align: center;
         list-style-position: inside;
 
     }
-    .education-notes li {
+
+    .work-notes li, .education-notes li {
         margin-inline: 0;
     }
+    
 }
 
 @media (max-width: 684px) {
