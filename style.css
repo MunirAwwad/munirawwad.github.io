@@ -564,6 +564,7 @@ body {
 .certificates-length {
     font-size: 1.25rem;
     color: rgb(150,150,150);
+    white-space: nowrap;
 }
 
 .certificates-item {
